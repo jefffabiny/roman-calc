@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  font-family: "Russo One", sans-serif;
+  width: 100%;
+}
+
+#root,
+.makeBlock {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.calcWrapper {
+  background-color: #000;
+  border-radius: 2rem;
+
+  box-shadow: 9px 9px 9px #a9a9a9, -9px -9px 9px #e9e9e9;
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  overflow: hidden;
+  width: 90%;
+}
+
+.inputContain {
+  align-items: flex-end;
+  background-color: #1e1e1e;
+  flex-direction: column;
+  height: 50%;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+.inputField,
+.inputField:focus {
+  appearance: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  outline: none;
+  text-align: right;
+  width: 100%;
+}
+.makeButton {
+  background: #efefef;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7),
+    -6px -6px 10px rgba(255, 255, 255, 0.5),
+    6px 6px 8px rgba(255, 255, 255, 0.075), 6px 6px 10px rgba(0, 0, 0, 0.15);
+  color: #444;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 60px;
+  letter-spacing: 0.2rem;
+  margin: 1rem;
+  outline: none;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.2s ease-in-out;
+}
+
+.makeButton:hover {
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6),
+    -2px -2px 4px rgba(255, 255, 255, 0.4),
+    2px 2px 2px rgba(255, 255, 255, 0.05), 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.makeButton:active {
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.7),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 2px rgba(255, 255, 255, 0.075),
+    inset 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
