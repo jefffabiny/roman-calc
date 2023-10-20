@@ -1,4 +1,4 @@
-import React from "react";
+import * as Styled from "./styled";
 
 interface Props {
   handleClear: () => void;
@@ -7,7 +7,7 @@ interface Props {
   isRomanMode: boolean;
 }
 
-function HeaderButtons(props: Props) {
+function TopControlBar(props: Props) {
   const { handleClear, handleEquals, handleModeChange, isRomanMode } = props;
 
   return (
@@ -42,4 +42,4 @@ const styles = {
   wrapper: { flex: 1, flexDirection: "row" as const, maxWidth: "600px" },
 };
 
-export default HeaderButtons;
+export default TopControlBar;

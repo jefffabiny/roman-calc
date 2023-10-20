@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Container, RunningTotal } from "./styled";
+
 interface Props {
   displayValue: string;
   equationValue: string;
@@ -11,29 +13,19 @@ function InputContain(props: Props) {
   const { displayValue, equationValue, isRomanMode, romanAsInt } = props;
 
   return (
-    <div className="inputContain makeBlock" style={styles.text}>
-      <div style={styles.block}>
+    <Container className="inputContain makeBlock">
+      <RunningTotal>
         <div>{equationValue}</div>
         <div>{isRomanMode ? `(${romanAsInt})` : null}</div>
-      </div>
+      </RunningTotal>
       <input
         className="inputField"
         disabled={true}
-        style={styles.text}
+        style={{ color: "#f4f4f4" }}
         value={displayValue}
       />
-    </div>
+    </Container>
   );
 }
-
-const styles = {
-  block: {
-    display: "flex",
-    flexDirection: "column" as const,
-  },
-  text: {
-    color: "#f4f4f4",
-  },
-};
 
 export default InputContain;

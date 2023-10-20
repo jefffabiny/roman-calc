@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
 import "./App.css";
-import InputContain from "./components/InputContain";
-import ButtonsContain from "./components/ButtonsContain";
+import InputContain from "./components/InputContain/InputContain";
+import ButtonsContain from "./components/ButtonsContain/ButtonsContain";
 import { romanize } from "./helpers";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
     if (romanAsInt === "") return;
     if (!isRomanMode) return;
     setDisplayValue(romanize(Number(romanAsInt)));
-  }, [romanAsInt]);
+  }, [isRomanMode, romanAsInt]);
 
   function handleNextDigit(theNum: number) {
     if (isRomanMode) {

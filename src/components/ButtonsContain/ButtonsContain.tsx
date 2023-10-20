@@ -1,6 +1,8 @@
-import NumberButtons from "./NumberButtons";
-import HeaderButtons from "./HeaderButtons";
-import OperatorButtons from "./OperatorButtons";
+import NumberButtons from "../NumberButtons";
+import OperatorButtons from "../OperatorButtons";
+import TopControlBar from "../TopControlBar/TopControlBar";
+
+import * as Styled from "./styled";
 
 interface Props {
   handleClear: () => void;
@@ -22,43 +24,24 @@ function ButtonsContain(props: Props) {
   } = props;
 
   return (
-    <div style={styles.wrapper}>
-      <div className="makeBlock" style={styles.topContain}>
-        <HeaderButtons
+    <Styled.Wrapper>
+      <Styled.TopControlBarContain className="makeBlock">
+        <TopControlBar
           handleClear={handleClear}
           handleEquals={handleEquals}
           handleModeChange={handleModeChange}
           isRomanMode={isRomanMode}
         />
-      </div>
-      <div className="makeBlock" style={styles.bottomContain}>
+      </Styled.TopControlBarContain>
+      <Styled.NumbersAndOperandsContain className="makeBlock">
         <NumberButtons
           handleNextDigit={handleNextDigit}
           isRomanMode={isRomanMode}
         />
         <OperatorButtons handleOperator={handleOperator} />
-      </div>
-    </div>
+      </Styled.NumbersAndOperandsContain>
+    </Styled.Wrapper>
   );
 }
-
-const styles = {
-  bottomContain: {
-    justifyContent: "space-between",
-    width: "600px",
-  },
-  topContain: {
-    width: "600px",
-  },
-  wrapper: {
-    alignItems: "center",
-    backgroundColor: "#efefef",
-    display: "flex",
-    flex: 1,
-    flexDirection: "column" as const,
-    justifyContent: "flex-start",
-    padding: "0 2rem 2rem",
-  },
-};
 
 export default ButtonsContain;
