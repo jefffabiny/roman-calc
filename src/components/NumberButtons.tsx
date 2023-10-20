@@ -23,13 +23,21 @@ function NumberButtons(props: Props) {
           />
         );
       })}
+      <div className="makeBlock makeButton" style={styles.equals}>
+        =
+      </div>
     </div>
   );
 }
 
 const styles = {
+  equals: {
+    flex: 1,
+    marginRight: "2rem",
+  },
   wrapper: {
     flexWrap: "wrap" as const,
+    justifyContent: "flex-start",
   },
 };
 
