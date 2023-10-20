@@ -1,4 +1,4 @@
-import NumberButton from "./NumberButton";
+import NumberButton from "./NumberButton/NumberButton";
 
 interface Props {
   handleNextDigit: (num: number) => void;

@@ -11,35 +11,27 @@ function TopControlBar(props: Props) {
   const { handleClear, handleEquals, handleModeChange, isRomanMode } = props;
 
   return (
-    <div className="makeBlock" style={styles.wrapper}>
-      <div
+    <Styled.Wrapper className="makeBlock">
+      <Styled.FlexOne
         className="makeButton makeBlock"
-        style={styles.button}
         onClick={() => handleModeChange()}
       >
         {isRomanMode ? "Int Mode" : "Roman Mode"}
-      </div>
-      <div
+      </Styled.FlexOne>
+      <Styled.FlexOne
         className="makeButton makeBlock"
-        style={styles.button}
         onClick={() => handleClear()}
       >
         Clear
-      </div>
-      <div
+      </Styled.FlexOne>
+      <Styled.FlexOne
         className="makeButton makeBlock"
-        style={styles.button}
         onClick={() => handleEquals()}
       >
         =
-      </div>
-    </div>
+      </Styled.FlexOne>
+    </Styled.Wrapper>
   );
 }
-
-const styles = {
-  button: { flex: 1 },
-  wrapper: { flex: 1, flexDirection: "row" as const, maxWidth: "600px" },
-};
 
 export default TopControlBar;
