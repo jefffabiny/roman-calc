@@ -1,4 +1,5 @@
-import Operator from "./Operator";
+import Operator from "../Operator/Operator";
+import { Wrapper } from "./styled";
 
 interface Props {
   handleOperator: (operator: string) => void;
@@ -8,20 +9,13 @@ function OperatorButtons(props: Props) {
   const { handleOperator } = props;
 
   return (
-    <div className="makeBlock" style={styles.wrapper}>
+    <Wrapper className="makeBlock">
       <Operator operator="+" handleOperator={handleOperator} />
       <Operator operator="-" handleOperator={handleOperator} />
       <Operator operator="*" handleOperator={handleOperator} />
       <Operator operator="/" handleOperator={handleOperator} />
-    </div>
+    </Wrapper>
   );
 }
-
-const styles = {
-  wrapper: {
-    flexDirection: "column" as const,
-    height: "100%",
-  },
-};
 
 export default OperatorButtons;

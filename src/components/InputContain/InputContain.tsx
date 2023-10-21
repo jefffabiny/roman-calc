@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Container, RunningTotal } from "./styled";
+import { Container, Input, RunningTotal } from "./styled";
 
 interface Props {
   displayValue: string;
@@ -13,12 +13,12 @@ function InputContain(props: Props) {
   const { displayValue, equationValue, isRomanMode, romanAsInt } = props;
 
   return (
-    <Container className="inputContain makeBlock">
+    <Container className="makeBlock">
       <RunningTotal>
         <div>{equationValue}</div>
         <div>{isRomanMode ? `(${romanAsInt})` : null}</div>
       </RunningTotal>
-      <input
+      <Input
         className="inputField"
         disabled={true}
         style={{ color: "#f4f4f4" }}

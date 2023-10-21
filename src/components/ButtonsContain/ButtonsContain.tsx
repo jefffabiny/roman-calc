@@ -1,5 +1,5 @@
-import NumberButtons from "../NumberButtons";
-import OperatorButtons from "../OperatorButtons";
+import NumberButtons from "../NumberButtons/NumberButtons";
+import OperatorButtons from "../OperatorButtons/OperatorButtons";
 import TopControlBar from "../TopControlBar/TopControlBar";
 
 import * as Styled from "./styled";

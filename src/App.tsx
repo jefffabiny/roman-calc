@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import InputContain from "./components/InputContain/InputContain";
 import ButtonsContain from "./components/ButtonsContain/ButtonsContain";
+import { CalcWrapper } from "./components/styled";
 import { romanize } from "./helpers";
 
 function App() {
@@ -128,7 +129,7 @@ function App() {
   }
 
   return (
-    <div className="calcWrapper">
+    <CalcWrapper>
       <InputContain
         displayValue={displayValue}
         equationValue={equationValue}
@@ -143,7 +144,7 @@ function App() {
         isRomanMode={isRomanMode}
         handleModeChange={handleModeChange}
       />
-    </div>
+    </CalcWrapper>
   );
 }
 
